@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
-import java.net.Socket;
 import java.net.URI;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -325,17 +324,5 @@ class AppEngineClientConnection implements ManagedClientConnection {
 			e.printStackTrace();
 			throw new IOException("error while sending GAE request", e);
 		}
-	}
-	
-	public String getId() {
-		return null;
-	}
-	
-	public void bind(Socket socket) throws IOException {
-		throw new IOException("bind unusable");
-	}
-	
-	public Socket getSocket() {
-		return null;
 	}
 }
